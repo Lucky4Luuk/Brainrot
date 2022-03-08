@@ -28,7 +28,7 @@ Basic declaration:
 ## Function calls
 ```bf
 :foo{
-	+++>---< Add 3 to the current cell, and subtract 3 from the next cell
+	+++>---< 	Add 3 to the current cell, and subtract 3 from the next cell
 }
 
 :main{
