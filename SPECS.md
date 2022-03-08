@@ -16,8 +16,11 @@ The virtual memory should be unbounded to the right, but bounded on the left.
 | |
 |:FUNC{code}|Function declaration
 |@FUNC|Function call
+| |
+|#MODULE|Import module into namespace
 
-## Function declaration
+## Functions
+### Function declaration
 Basic declaration:
 ```bf
 :foo{
@@ -25,7 +28,7 @@ Basic declaration:
 }
 ```
 
-## Function calls
+### Function calls
 ```bf
 :foo{
 	+++>---< 	Add 3 to the current cell, and subtract 3 from the next cell
@@ -36,6 +39,16 @@ Basic declaration:
 	@foo		Call function foo
 	--->+++<	Set cell 1 and cell 2 back to 0
 }
+```
+
+### Function order
+Function declaration/calling should not require a specific order for it to be found. Consider the following valid:
+```bf
+:foo{
+	@bar
+}
+
+:bar{}
 ```
 
 ## Memory
