@@ -2,7 +2,7 @@
 
 ## Commands
 The basic commands are similar to the original brainfuck commands.
-The cell pointer points to an 8 bit memory address allocated as consecutive virtual memory when needed.
+The cell pointer points to an 8 bit memory address.
 The virtual memory should be unbounded to the right, but bounded on the left.
 
 |Command|Description
@@ -28,7 +28,7 @@ Basic declaration:
 ## Function calls
 ```bf
 :foo{
-	+++>---<
+	+++>---< Add 3 to the current cell, and subtract 3 from the next cell
 }
 
 :main{
@@ -37,3 +37,7 @@ Basic declaration:
 	--->+++<	Set cell 1 and cell 2 back to 0
 }
 ```
+
+## Memory
+Memory is mapped as virtual memory consisting of consecutive 8 bit memory cells.
+Memory is allocated globally, so every function shares the same memory.
