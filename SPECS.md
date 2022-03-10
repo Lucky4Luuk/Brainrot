@@ -54,3 +54,20 @@ Function declaration/calling should not require a specific order for it to be fo
 ## Memory
 Memory is mapped as virtual memory consisting of consecutive 8 bit memory cells.
 Memory is allocated globally, so every function shares the same memory.
+
+## Module importing
+This section still requires a lot more information.
+
+test.bf
+```bf
+:foo{}
+```
+
+main.bf
+```bf
+#test
+
+:main{
+	@test_foo
+}
+```
